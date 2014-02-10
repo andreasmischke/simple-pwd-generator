@@ -2,6 +2,20 @@
 
 header("Content-Type: text/plain");
 
+if($_SERVER['QUERY_STRING'] == "")
+{
+echo <<<MANPAGE
+Usage examples:
+https://mischke.me/tools/pwd               this manpage
+https://mischke.me/tools/pwd/10            create alphanumeric passphrase with 10 chars
+https://mischke.me/tools/pwd/5x10          create 5 alphanumeric passphrases with 10 chars
+https://mischke.me/tools/pwd/5x10-crypt    create 5 alphanumeric passphrases with 10 chars
+https://mischke.me/tools/pwd/5x10-memo     create 5 memorable passphrases with 10 chars (not implemented yet)
+MANPAGE;
+	
+	die();
+}
+
 $type = isset($_GET['type']) && $_GET['type'] != "" ? $_GET['type'] : "crypt";
 $times = isset($_GET['times']) && $_GET['times'] != "" ? (int) $_GET['times'] : 1;
 
