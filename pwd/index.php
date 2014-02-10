@@ -1,7 +1,7 @@
 <?php
 
 $type = isset($_GET['type']) ? $_GET['type'] : "crypt";
-if($type = "crypt")
+if($type == "crypt")
 {
 	$length = isset($_GET['length']) ? (int) $_GET['length'] : 32;
 }
