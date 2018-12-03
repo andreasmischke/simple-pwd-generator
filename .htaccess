@@ -1,7 +1,0 @@
-RewriteEngine On
-RewriteBase /tools/pwd
-
-RewriteRule ^$ index.php [L]
-RewriteRule ^([0-9]+)$ index.php?length=$1 [L]
-RewriteRule ^([0-9]+)x([0-9]+)$ index.php?times=$1&length=$2 [L]
-RewriteRule ^([0-9]+)x([0-9]+)-([a-z]+)$ index.php?times=$1&length=$2&type=$3 [L]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mischke.me Password Generator Help</title>
+</head>
+<body>
+<pre>
+Usage:
+    You can call <?php echo $_SERVER['SCRIPT_URI']; ?> with following GET
+    parameters. All parameters are optional and set to a default value if
+    omitted.
+
+Parameters:
+    type    Type of password you want to generate. Possible values are 'alnum'
+            and 'passphrase'. 'alnum' generates strings with lowercase letters,
+            uppercase letters and numeric digits. 'passphrase' concatenates
+            words. Defaults to 'alnum'
+    count   Number of passwords to generate. Minimum 1, maximum 100.
+            Defaults to '1'
+    length  Length of the generated password(s) or passphrase(s). The length of
+            (alnum) passwords is treated as character count, the length of
+            passphrases as word count. Defaults to '16'
+    format  Response format. Possible values are 'text' and 'json'. 'text'
+            prints one password per line, 'json' returns an object with a
+            'data' attribute of type array, containing one string per password.
+            Defaults to 'text'.
+    help    If set to any value, this help page will be shown. Other parameters
+            are ignored in that case.
+</pre>
+</body>
+</html>
